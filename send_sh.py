@@ -16,7 +16,7 @@ f= open(ruta, 'rb')
 
 token=session.cookies['csrftoken']
 
-r =session.post('http://127.0.0.1:8000/inicio_tarea',files = {'file':f}, data={'csrfmiddlewaretoken': token,"name":"viajes"})
+r =session.post('http://127.0.0.1:8000/inicio_tarea',files = {'script':f}, data={'csrfmiddlewaretoken':token,"name_table":"viajes","type_script":"sh","container_name":"container_renting"})
 print r, r.text
 
 
